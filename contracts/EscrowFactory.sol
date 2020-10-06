@@ -1,11 +1,9 @@
+pragma solidity 0.6.9;
 // SPDX-License-Identifier: MIT
 //authors : dexcrow Team
 
-pragma solidity 0.6.3;
-import 'https://raw.githubusercontent.com/OpenZeppelin/openzeppelin-contracts/master/contracts/utils/ReentrancyGuard.sol';
 
-
-contract Escrow {
+contract EscrowSetup {
     function init(address payable _sender, address payable _receiver, uint256 _amount, string memory _btcAddress, uint256 _lockTimestamp, uint256 _fee) public {}
 }
 
@@ -50,7 +48,7 @@ contract EscrowFactory {
         
         Token token = Token(linkToken);
         token.transfer(addr, oracleFee);
-        Escrow escrow = Escrow(addr);
+        EscrowSetup escrow = EscrowSetup(addr);
         escrow.init(msg.sender, _receiverAddress, _amount, _btcAddress, _lockTimestamp, oracleFee);
         emit EscrowCreated(msg.sender, _receiverAddress, addr, newsalt);
     }
@@ -69,7 +67,7 @@ contract EscrowFactory {
         
         Token token = Token(linkToken);
         token.transfer(addr, oracleFee);
-        Escrow escrow = Escrow(addr);
+        EscrowSetup escrow = EscrowSetup(addr);
         escrow.init(_senderAddress, msg.sender, _amount, _btcAddress, _lockTimestamp, oracleFee);
         emit EscrowCreated(_senderAddress, msg.sender, addr, newsalt);
     }
