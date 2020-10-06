@@ -1,8 +1,11 @@
+
+
 // SPDX-License-Identifier: MIT
 //authors : dexcrow Team
 
-pragma solidity 0.6.3;
+pragma solidity 0.7.0
 import 'https://raw.githubusercontent.com/OpenZeppelin/openzeppelin-contracts/master/contracts/utils/ReentrancyGuard.sol';
+
 
 
 contract Escrow {
