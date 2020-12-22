@@ -9,7 +9,6 @@ module.exports = {
     development: {
       host: 'localhost',
       port: 8545,
-      from: '0x303de46de694cC75A2F66dA93Ac86c6a6EeE607e',
       network_id: '*', // Match any network id
       provider: new HDWalletProvider(
           mnemnoicPhrase,

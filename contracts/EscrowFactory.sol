@@ -1,4 +1,4 @@
-pragma solidity 0.7.0;
+pragma solidity >=0.4.22 <0.8.0;
 // SPDX-License-Identifier: MIT
 //authors : dexcrow Team
 
@@ -78,7 +78,7 @@ contract EscrowFactory {
         /** mitigation against reentrancy attacks 
          * see https://consensys.github.io/smart-contract-best-practices/known_attacks/#reentrancy-on-a-single-function
         */
-        (bool success,) = owner.call {
+        (bool success,) = owner.call{
             value: address(this).balance
         }("");
         require(success, "withdrawal failed");
