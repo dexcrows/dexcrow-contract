@@ -1,5 +1,6 @@
+const fs = require('fs')
 const HDWalletProvider = require('@truffle/hdwallet-provider');
-const mnemnoicPhrase = 'wine churn waste cabbage admit security brisk knife swallow fancy rib observe';
+const mnemonicPhrase = fs.readFileSync('.secret').toString().trim();
 
 module.exports = {
 
@@ -11,8 +12,8 @@ module.exports = {
       port: 8545,
       network_id: '*', // Match any network id
       provider: new HDWalletProvider(
-          mnemnoicPhrase,
-          'http://localhost:8545',
+        mnemonicPhrase,
+        'http://localhost:8545',
       ),
       gas: 450000000,
       gasPrice: 100000000000,
