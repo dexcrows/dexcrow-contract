@@ -1,0 +1,34 @@
+{
+  "name": "dexcrow-contract",
+  "version": "1.0.0",
+  "description": "dexcrow contracts",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "@chainlink/contracts": "0.0.11",
+    "@truffle/hdwallet-provider": "^1.1.0"
+  },
+  "devDependencies": {
+    "mocha": "^8.1.3"
+  },
+  "scripts": {
+    "test": "mocha --exit --recursive test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eltNEG/dexcrow-contract.git"
+  },
+  "keywords": [
+    "smartcontracts",
+    "solidity",
+    "escrow"
+  ],
+  "author": "dexcrow team",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/eltNEG/dexcrow-contract/issues"
+  },
+  "homepage": "https://github.com/eltNEG/dexcrow-contract#readme"
+}

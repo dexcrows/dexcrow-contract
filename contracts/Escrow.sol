@@ -1,7 +1,7 @@
-pragma solidity 0.7.0;
+pragma solidity >=0.4.22 <0.8.0;
 
 // SPDX-License-Identifier: MIT
-import "https://raw.githubusercontent.com/smartcontractkit/chainlink/develop/evm-contracts/src/v0.6/ChainlinkClient.sol";
+import "@chainlink/contracts/src/v0.6/ChainlinkClient.sol";
 
 contract Escrow is ChainlinkClient {
   
